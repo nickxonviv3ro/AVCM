@@ -1,0 +1,60 @@
+/* Custom CSS for clinic form */
+.clinic-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f6f6f6; /* Fallback color if image is not available */
+  background-image: url('Apointment.png'); /* Relative path to the background image */
+  background-size: cover; /* Cover the entire element with the background image */
+  background-position: center; /* Center the background image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+}
+
+.large-calendar {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Additional styles for select input */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "\25BC"; /* caret */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Styling for form elements */
+.form-label {
+  font-weight: bold;
+  color: #333; /* Dark text color */
+}
+
+.form-control {
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Border for form inputs */
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #007bff; /* Eye-catching button color */
+  border-color: #007bff;
+  color: #fff; /* Text color */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-primary:hover {
+  background-color: #007bff; /* Darker shade on hover */
+  border-color: #007bff;
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Booking Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="appointment.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5 clinic-form">
+    <h2 class="mb-4">AVCM Appointment Form</h2>
+    <form id="appointmentForm">
+      <!-- Name input -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <!-- Email input -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <!-- Purpose of Appointment dropdown -->
+      <div class="mb-3">
+        <label for="purpose" class="form-label">Purpose of Appointment</label>
+        <select class="form-select" id="purpose" required>
+          <option value="">Select purpose</option>
+          <option value="Ears">Ears</option>
+          <option value="Nose">Nose</option>
+          <option value="Throat">Throat</option>
+          <option value="Eyes">Eyes</option>
+        </select>
+      </div>
+      <!-- Date of Appointment input using Vue Calendar -->
+      <div class="mb-3">
+        <label for="date" class="form-label">Date of Appointment</label>
+        <div id="app">
+          <input type="text" v-model="selectedDate" class="form-control" placeholder="Select date" @click="showCalendar" readonly>
+          <!-- Large calendar component -->
+          <div class="large-calendar" v-show="showLargeCalendar">
+            <!-- This is just a placeholder, replace it with the actual calendar component -->
+            <vue-calendar @date-selected="dateSelected"></vue-calendar>
+          </div>
+        </div>
+        <input type="hidden" id="selectedDate" name="selectedDate">
+      </div>
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <!-- Vue Calendar Component (Replace this with the actual path to your Vue Calendar component) -->
+  <script src="path_to_vue_calendar_component"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        selectedDate: '',
+        showLargeCalendar: false
+      },
+      methods: {
+        dateSelected(date) {
+          this.selectedDate = date;
+          document.getElementById('selectedDate').value = date;
+          this.showLargeCalendar = false; // Hide the large calendar after selecting a date
+        },
+        showCalendar() {
+          this.showLargeCalendar = true; // Show the large calendar when the input field is clicked
+        }
+      }
+    });
+  </script>
+</body>
+</html>
