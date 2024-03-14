@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navigation Bar with Sidebar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <a href="dashboard.html">Dashboard</a>
+  <a href="doctors.html">Doctors</a>
+  <a href="patients.html">Patients</a>
+  <a href="doctors_schedule.html">Doctors Schedule</a>
+  <a href="patients_appointment.html">Patients Appointment</a>
+  <a href="pharmacy.html">Pharmacy</a>
+  <a href="index.html">Logout</a>
+</div>
+
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00acb1;">
+    <a class="navbar-brand" href="#">AVCM Consultation Clinic</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <span class="nav-link">Logged in as: Admin</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+<!-- Main Content -->
+<div class="main-content">
+    <h2>Main Content Area</h2>
+    <p>This is the main content area. You can add your content here.</p>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
