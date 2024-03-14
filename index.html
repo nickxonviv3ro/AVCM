@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="style.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVCM Clinic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
-  <header>
-    <div class="wrapper">
-      <form action="Avcm.html">
-        <h1 class="word">AVCM Medical Clinic</h1>
-        <h1>Login</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Username" required>
-          <i class='bx bxs-user'></i>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffffff;">
+    <a class="navbar-brand" href="#" style="font-family: 'Arial Black', sans-serif; font-size: 24px; color: #00acb1;">AVCM Consultation Clinic</a>
+    <button class="btn btn-primary ml-auto" onclick="window.location.href='login.html'" style="margin-right: 15px;">Login</button>
+</nav>
+
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to AVCM Clinic</h1>
+    <p class="lead">Your trusted partner for healthcare services.</p>
+    <a class="btn btn-primary btn-lg" href="appointment.html" role="button">Make an Appointment</a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="section-container">
+                <h2>Services</h2>
+                <p>Explore our range of medical services provided by experienced professionals. From general check-ups to specialized treatments, we have you covered.</p>
+                <a class="btn btn-outline-primary" href="#">View Services</a>
+            </div>
         </div>
-        <div class="input-box">
-          <input type="password" placeholder="Password" required>
-          <i class='bx bx-lock-alt'></i>
+        <div class="col-md-4">
+            <div class="section-container">
+                <h2>Doctors</h2>
+                <p>Meet our team of skilled and compassionate doctors dedicated to your well-being. Learn about their expertise and experience.</p>
+                <a class="btn btn-outline-primary" href="#">Meet the Team</a>
+            </div>
         </div>
-        <div class="remember-forgot">
-          <label for="checkbox"><input type="checkbox">Remember me</label>
-          <a href="#">Forgot Password?</a>
+        <div class="col-md-4">
+            <div class="section-container">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any inquiries or assistance regarding our services. Our friendly staff is here to help you.</p>
+                <a class="btn btn-outline-primary" href="#">Contact Information</a>
+            </div>
         </div>
-        <button type="submit" class="btn">Login</button>
-        <div class="register-link">
-          <p>Don't have an account?<a href="signup.html">Register</a></p>
-        </div>
-      </form>
     </div>
-  </header>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
